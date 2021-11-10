@@ -36,7 +36,7 @@ const log = (input) => console.log(input);
 // }, 1000);
 
 ///////////////////////////////////////////////////////////
-// Generation Engine Express Test
+// Generation Engine
 const express = require("express");
 const GenerationEngine = require("./components/generations/generations_engine");
 const dragonRouter = require("./api/dragon/route_dragon");
@@ -45,18 +45,18 @@ const generationRouter = require("./api/generations/route_generation");
 const app = express();
 const engine = new GenerationEngine();
 
+/////////////////////////////////////
+// Generation Engine Express test
 // setTimeout(() => engine.stop(), 20000);
-
 // app.get("/dragon/new", (request, response) => {
 //   response.json({ dragon: engine.generation.newDragon() });
 // });
 
-// Attach all routes from the dragon router
-// onto this subroute /dragon
-
 // Bind objects to the express application
 app.locals.engine = engine;
 
+// Attach all routes from the dragon router
+// onto this subroute /dragon
 app.use("/dragons", dragonRouter);
 app.use("/generations", generationRouter);
 

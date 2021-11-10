@@ -5,7 +5,7 @@ class DragonsTable {
     const { birthdate, nickname, generationId } = dragon;
     return new Promise((resolve, reject) => {
       pool.query(
-        `INSERT INTO dragons(birthdate, nickname, "generationId")
+        `INSERT INTO dragons(birthdate, nickname, generation_id)
          VALUES($1, $2, $3) RETURNING id`,
         [birthdate, nickname, generationId],
         (err, response) => {

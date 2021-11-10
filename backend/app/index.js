@@ -7,10 +7,10 @@ const log = (input) => console.log(input);
 //   nickname: "bbg",
 //   birthdate: new Date(),
 //   traits: [
-//     { traitType: "color", traitValue: "black" },
-//     { traitType: "pattern", traitValue: "solid" },
-//     { traitType: "build", traitValue: "eggnormous" },
-//     { traitType: "ability", traitValue: "earth" },
+//     { trait_type: "color", trait_value: "black" },
+//     { trait_type: "pattern", trait_value: "solid" },
+//     { trait_type: "build", trait_value: "eggnormous" },
+//     { trait_type: "ability", trait_value: "earth" },
 //   ],
 // });
 

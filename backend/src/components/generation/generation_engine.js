@@ -1,5 +1,5 @@
-const Generation = require("./index");
-const GenerationsTable = require("../../api/generations/generations_table");
+const Generation = require("./generation");
+const GenerationsTable = require("../../database/generations_table");
 
 class GenerationsEngine {
   constructor() {
@@ -26,10 +26,9 @@ class GenerationsEngine {
         // If no error, generation will be a valid object.
         this.generation = generation;
         this.generation.generationId = generationId;
-        console.log("id", this.generation.generationId);
-        console.log("new generation", this.generation);
+        console.log("Generations Table:", this.generation);
         console.log(
-          "Lifespan: ",
+          "Generations Table-Expire Time: ",
           (() => {
             const date = new Date(
               this.generation.expiration.getTime() - Date.now()

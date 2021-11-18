@@ -1,5 +1,5 @@
 // Class for adding generation fields to sql database
-const pool = require("../../../bin/databasePool");
+const pool = require("../../bin/databasePool");
 
 // The class acts as a namespace to collect methods.
 class GenerationsTable {
@@ -9,11 +9,11 @@ class GenerationsTable {
       // When the put is complete, psql will return the id of the new record
       // which will then be returned to the app.
       pool.query(
-        "INSERT INTO generations(expiration) VALUES($1) RETURNING id",
+        "INSERT INTO generations(expiration) VALUES($1) RETURNING generation_id",
         [generation.expiration],
         (err, response) => {
           if (err) return reject(err);
-          const generationId = response.rows[0].id;
+          const generationId = response.rows[0].generation_id;
           resolve({ generationId });
         }
       );

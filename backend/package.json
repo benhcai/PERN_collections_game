@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon ./app/tests.js",
     "configure": "./bin/configure_db.sh",
-    "dev": "nodemon ./bin/server.js",
+    "dev": "nodemon ./src/server.js",
     "configure-dev": "npm run configure && npm run dev"
   },
   "author": "",

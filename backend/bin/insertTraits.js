@@ -8,7 +8,7 @@ TRAITS.forEach((trait) => {
     pool.query(
       `INSERT INTO traits(trait_type, trait_value) 
        VALUES($1, $2)
-       RETURNING id`,
+       RETURNING trait_id`,
       // referring to $1, $2
       [traitType, traitValue],
       (err, res) => {

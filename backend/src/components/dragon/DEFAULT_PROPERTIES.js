@@ -22,8 +22,10 @@ const TRAITS = require("../../../data/traits.json");
 
 // Using Object Literal
 const DEFAULT_PROPERTIES = {
+  dragonId: undefined,
   nickname: "unnamed",
-  // This would cause all defaults to have the same Date()
+  generationId: undefined,
+  // The property would cause all defaults to have the same Date()
   // birthdate: new Date(),
   // Use a getter instead. Note getters don't accept parameters.
   get birthdate() {
@@ -46,8 +48,6 @@ const DEFAULT_PROPERTIES = {
   get traits() {
     return this.randomTraits;
   },
-
-  generationId: undefined,
 };
 
 module.exports = DEFAULT_PROPERTIES;

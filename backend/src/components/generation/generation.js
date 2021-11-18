@@ -1,5 +1,5 @@
 const { REFRESH_RATE, SECONDS } = require("../../config");
-const Dragon = require("../dragon");
+const Dragon = require("../dragon/dragon");
 
 // Sets units for expiration calculations
 const refreshRate = REFRESH_RATE * SECONDS;

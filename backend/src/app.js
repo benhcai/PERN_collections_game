@@ -39,8 +39,8 @@ const log = (input) => console.log(input);
 // Generation Engine
 const express = require("express");
 const GenerationEngine = require("./components/generation/generation_engine");
-const dragonRouter = require("./api/dragons/route_dragon");
-const generationRouter = require("./api/generations/route_generation");
+const dragonsRouter = require("./routes/dragons/dragons_router");
+const generationsRouter = require("./routes/generations/generations_router");
 
 const app = express();
 const engine = new GenerationEngine();
@@ -57,8 +57,8 @@ app.locals.engine = engine;
 
 // Attach all routes from the dragon router
 // onto this subroute /dragon
-app.use("/dragons", dragonRouter);
-app.use("/generations", generationRouter);
+app.use("/dragons", dragonsRouter);
+app.use("/generations", generationsRouter);
 
 // Express error handler. Also an express middleware.
 app.use((err, req, res, next) => {

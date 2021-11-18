@@ -1,4 +1,4 @@
-const pool = require("../../../bin/databasePool");
+const pool = require("../../bin/databasePool");
 
 class TraitsTable {
   // Get the traitId based on fields
@@ -9,7 +9,7 @@ class TraitsTable {
       pool.query(
         `
         SELECT  
-                id 
+                trait_id 
         FROM    
                 traits 
         WHERE   
@@ -18,7 +18,7 @@ class TraitsTable {
         [traitType, traitValue],
         (err, response) => {
           if (err) return console.log("traitstable", err);
-          resolve({ traitId: response.rows[0].id });
+          resolve({ traitId: response.rows[0].trait_id });
         }
       );
     });

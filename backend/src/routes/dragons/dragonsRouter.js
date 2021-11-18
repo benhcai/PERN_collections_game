@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const DragonsTable = require("../../database/dragons_table");
+const DragonsTable = require("../../database/dragonsTable");
 
 const router = new Router();
 

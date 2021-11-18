@@ -38,9 +38,9 @@ const log = (input) => console.log(input);
 ///////////////////////////////////////////////////////////
 // Generation Engine
 const express = require("express");
-const GenerationEngine = require("./components/generation/generation_engine");
-const dragonsRouter = require("./routes/dragons/dragons_router");
-const generationsRouter = require("./routes/generations/generations_router");
+const GenerationEngine = require("./components/generation/generationEngine");
+const dragonsRouter = require("./routes/dragons/dragonsRouter");
+const generationsRouter = require("./routes/generations/generationsRouter");
 
 const app = express();
 const engine = new GenerationEngine();

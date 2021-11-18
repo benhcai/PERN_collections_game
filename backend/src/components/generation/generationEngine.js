@@ -1,5 +1,5 @@
 const Generation = require("./generation");
-const GenerationsTable = require("../../database/generations_table");
+const GenerationsTable = require("../../database/generationsTable");
 
 class GenerationsEngine {
   constructor() {

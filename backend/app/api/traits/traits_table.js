@@ -26,13 +26,13 @@ class TraitsTable {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-// TraitsTable query test
-TraitsTable.getTraitId({ traitType: "ability", traitValue: "earth" })
-  .then((traitId) => {
-    console.log(traitId);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// // TraitsTable query test
+// TraitsTable.getTraitId({ traitType: "ability", traitValue: "earth" })
+//   .then((traitId) => {
+//     console.log(traitId);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 module.exports = TraitsTable;

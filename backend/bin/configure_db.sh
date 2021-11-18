@@ -17,10 +17,12 @@ createdb -U node_user dragonstackdb
 
 echo "Configuring database: dragonstackdb..."
 
-# Connect, with specified user, to database
+# Load Postgres SQL statements,
+# Connect, with specified user, to databases
 psql -U node_user dragonstackdb < ./bin/sql/generations.sql
 psql -U node_user dragonstackdb < ./bin/sql/dragons.sql
 psql -U node_user dragonstackdb < ./bin/sql/traits.sql
+psql -U node_user dragonstackdb < ./bin/sql/dragon_traits.sql
 
 node ./bin/insertTraits.js
 

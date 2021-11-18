@@ -4,4 +4,4 @@ CREATE TABLE dragons(
   nickname          VARCHAR(64),
   generation_id    INTEGER,
   FOREIGN KEY (generation_id) REFERENCES generations(id)
-)
+);

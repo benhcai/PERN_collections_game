@@ -38,8 +38,8 @@ const log = (input) => console.log(input);
 ///////////////////////////////////////////////////////////
 // Generation Engine
 const express = require("express");
-const GenerationEngine = require("./components/generations/generations_engine");
-const dragonRouter = require("./api/dragon/route_dragon");
+const GenerationEngine = require("./components/generation/generation_engine");
+const dragonRouter = require("./api/dragons/route_dragon");
 const generationRouter = require("./api/generations/route_generation");
 
 const app = express();

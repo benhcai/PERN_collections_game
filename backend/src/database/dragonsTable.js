@@ -1,3 +1,4 @@
+const { response } = require("express");
 const pool = require("../../bin/databasePool");
 const DragonTraitsTable = require("./dragonTraitsTable");
 
@@ -36,6 +37,23 @@ class DragonsTable {
       );
     });
   }
+
+  static getDragon(dragon) {
+    return new Promise((resolve, reject) => {
+      pool.query(
+        `SELECT birthdate, nickname, generation_id
+         FROM dragons
+         WHERE dragons.dragon_id = $1`,
+        [dragon.dragonId],
+        (err, response) => {
+          if (err) return reject(err);
+          if (response.rows.length === 0)
+            return reject(new Error("No dragon"));
+          resolve(response.rows[0]);
+        }
+      );
+    });
+  }
 }
 
 /////////////////////////////////////////////////////////////
@@ -45,5 +63,10 @@ class DragonsTable {
 // DragonsTable.storeDragon(generation.newDragon()).then((response) =>
 //   console.log(response)
 // );
+
+// console.log("Test get dragon properties using ID");
+// DragonsTable.getDragon({ dragonId: 1 })
+//   .then((dragon) => console.log(dragon))
+//   .catch((err) => console.log("error ", err));
 
 module.exports = DragonsTable;

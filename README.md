@@ -1,6 +1,6 @@
 # PERN_dragons
 
-## Explanation of directiories
+## EXPLANATION OF DIRECTORIES
 
 ### app
 
@@ -16,12 +16,20 @@ Includes the dragon class, generation class, engine setup, and their data models
 
 Files containing data for the app.
 
-## PostGres
+# NOTES
+
+### PostGres
 
 Postgres uses 1 based indexing.
 The postgres syntax helps prevent sql injection:
 **./GenerationsTable:**
 "INSERT INTO generations(expiration) VALUES($1) RETURNING id",
+
+; is required at the end of the commands in the cli
+
+#### Naming Convention for PostGres
+
+PostgreSQL stores all table and columns (that are not in double quotes) in lowercase, so the above would be stored as product rather than Product, if you run a select with uppercase (PascalCase) against Postgres, the query will fail saying the column doesn’t exist. Thus, the Postgres convention for tables and columns, is to name everything lowercase with under scores. The above would become:
 
 ### sql
 
@@ -31,7 +39,7 @@ VARCHAR
 
 A table has records (rows) and fields (columns).
 
-### Trait-dragons:
+### trait-dragons tableo:
 
 Storing json as serialzed (stringified) property is frowned upon. It would slow down data crawling and a user would have to unstringify the value.
 

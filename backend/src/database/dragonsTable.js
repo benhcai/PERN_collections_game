@@ -1,4 +1,3 @@
-const { response } = require("express");
 const pool = require("../../bin/databasePool");
 const DragonTraitsTable = require("./dragonTraitsTable");
 

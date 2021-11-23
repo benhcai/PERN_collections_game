@@ -38,11 +38,13 @@ const log = (input) => console.log(input);
 ///////////////////////////////////////////////////////////
 // Generation Engine
 const express = require("express");
-const GenerationEngine = require("./components/generation/generationEngine");
-const dragonsRouter = require("./routes/dragons/dragonsRouter");
-const generationsRouter = require("./routes/generations/generationsRouter");
-
 const app = express();
+const cors = require("cors");
+
+const GenerationEngine = require("./src/components/generation/generationEngine");
+const dragonsRouter = require("./src/routes/dragons/dragonsRouter");
+const generationsRouter = require("./src/routes/generations/generationsRouter");
+
 const engine = new GenerationEngine();
 
 /////////////////////////////////////
@@ -55,6 +57,11 @@ const engine = new GenerationEngine();
 // Bind objects to the express application
 app.locals.engine = engine;
 
+// https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+// Same-origin policy specifes that the protocol (http),
+// host (www., drive.), and port (3000)
+// cors is an express middleware that configures cross-origin resource sharing
+app.use(cors({ origin: "http://localhost:1234" }));
 // Attach all routes from the dragon router
 // onto this subroute /dragon
 app.use("/dragons", dragonsRouter);

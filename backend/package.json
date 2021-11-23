@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon ./app/tests.js",
+    "test": "nodemon ./src/tests.js",
     "configure": "./bin/configure_db.sh",
-    "dev": "nodemon ./src/server.js",
+    "dev": "nodemon ./server.js",
+    "start": "nodemon ./server.js",
     "configure-dev": "npm run configure && npm run dev"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "pg": "^8.7.1"
   }

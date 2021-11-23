@@ -1,6 +1,5 @@
 const pool = require("../../bin/databasePool");
 const TraitsTable = require("./traitsTable");
-const TraitTable = require("./traitsTable");
 
 class DragonTraitsTable {
   static storeDragonTraits({ dragonId, traitType, traitValue }) {

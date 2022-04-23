@@ -1,0 +1,21 @@
+{
+  "name": "dragons_postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "configure": "./bin/seeds/configure_db.sh",
+    "dev": "nodemon ./src/server.js",
+    "start": "nodemon ./src/server.js",
+    "configure-dev": "npm run configure && npm run dev",
+    "test": "jest --verbose ./tests/jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "uuid": "^8.3.2"
+  }
+}

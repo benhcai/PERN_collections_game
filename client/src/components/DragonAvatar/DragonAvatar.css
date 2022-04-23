@@ -1,0 +1,17 @@
+.DragonAvatar-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DragonAvatar-image-background {
+  position: absolute;
+}
+
+.DragonAvatar-image-pattern {
+  position: absolute;
+}
+
+.DragonAvatar-image-build {
+  z-index: 1;
+}

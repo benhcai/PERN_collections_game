@@ -1,5 +1,7 @@
 # PERN Collections Game
 
+<iframe src='https://gfycat.com/ifr/NaughtyDarlingIceblueredtopzebra' frameborder='0' scrolling='no' allowfullscreen width='640' height='620'></iframe>
+
 PERN Collections Game was originally designed to be a collecting game where players can login and collect different types of mythical creatures. On top of that, they will be able to trade and use their creatures to earn more gold, the in-game currency.
 
 The initial use-case for this application was to provide a generation engine for more complete placeholder data. While REST APIs that provide dummy data currently exist, the aim of this application is to provide JSON data along with images that are dynamically generated based on the descriptions of the JSON data. E.g. { type: person, color: blue, pattern: striped, build: short } would produce an image of a skinny blue person wearing a striped shirt, or... a smurf.

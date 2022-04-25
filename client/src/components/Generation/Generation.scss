@@ -1,0 +1,60 @@
+.Generation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+}
+
+.generation-id {
+  margin-top: 0.5rem;
+  font-size: 45px;
+  letter-spacing: 1.6px;
+}
+
+.generation-id-label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.447);
+  letter-spacing: 0.3px;
+}
+
+.experation-time {
+  margin-top: 16px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.774);
+  letter-spacing: 0.6px;
+}
+
+.Generation--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.774);
+}
+
+.online {
+  // background-color: green;
+  margin-top: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 0.7rem;
+  border-radius: 50%;
+  background-color: rgb(148, 248, 121);
+  box-shadow: 0 0 3px 1px #fff, 0 0 3px 1px rgb(47, 255, 0),
+    0 0 3px 1px rgba(81, 255, 0, 0.835);
+  animation-name: pulsate;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

@@ -7,7 +7,7 @@ export const getDragonImage = (traits) => {
     dragonPropertyMap[traitType] = propertyMap[traitType][traitValue];
   });
   // console.log("dpm", dragonPropertyMap);
-  const imageSize = { width: 200, height: 200 };
+  const imageSize = { width: 220, height: 220 };
   return (
     <div className="DragonAvatar-image-wrapper">
       <div

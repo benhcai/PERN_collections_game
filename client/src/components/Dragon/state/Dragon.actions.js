@@ -7,6 +7,7 @@ const fetchNewDragon = () => (dispatch) => {
   fetch(`${BACKEND.ADDRESS}/dragons/new`)
     .then((res) => res.json())
     .then((json) => {
+      console.log(json.storedDragon);
       if (json.type === "error") {
         dispatch({
           type: DRAGON_TYPES.DRAGON_FETCH_ERROR,
@@ -15,7 +16,7 @@ const fetchNewDragon = () => (dispatch) => {
       } else {
         dispatch({
           type: DRAGON_TYPES.DRAGON_FETCH_SUCCESS,
-          dragon: json.dragon,
+          dragon: json.storedDragon,
         });
       }
     })

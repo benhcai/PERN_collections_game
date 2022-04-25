@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.App--title {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+button {
+  padding: 4px 15px;
+  max-width: 10rem;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+}

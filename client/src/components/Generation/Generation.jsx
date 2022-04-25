@@ -33,16 +33,18 @@ class Generation extends Component {
       return <div>{generation.message}</div>;
     }
     return (
-      <div>
-        <h2>Generation</h2>
-        <p>Current Generation: {generation.generationId}</p>
-        <p>
-          Current Generation Expiration date:
-          {generation.expirationTime}
-        </p>
-        <button onClick={() => this.props.fetchGeneration()}>
+      <div className="Generation">
+        <div className="Generation--title">
+          <h2 className="Generation--title">GENERATION CREATION</h2>
+          <div className="online"></div>
+        </div>
+        <p className="generation-id">{generation.generationId}</p>
+        <p className="generation-id-label">Current Generation</p>
+        <p className="experation-time">{generation.expirationTime}</p>
+        <p className="generation-id-label">Expiration</p>
+        {/* <button className="" onClick={() => this.props.fetchGeneration()}>
           Get current generation
-        </button>
+        </button> */}
       </div>
     );
   }

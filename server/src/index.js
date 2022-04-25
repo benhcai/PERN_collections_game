@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const GenerationEngineService = require("./components/generation/generationEngine.service");
 const dragonsRouter = require("./api/routes/dragon.router");
@@ -25,9 +26,11 @@ app.locals.engine = engine;
 // Same-origin policy specifes that the protocol (http),
 // host (www., drive.), and port (3000)
 // cors is an express middleware that configures cross-origin resource sharing
-app.use(cors({ origin: "http://localhost:1234" }));
+app.use(cors({ origin: "http://localhost:1234", credentials: true }));
 // Parse the incomming http post request data
 app.use(express.json());
+app.use(cookieParser());
+
 // Attach all routes from the dragon router
 // onto this subroute /dragon
 app.use("/accounts", accountRouter);

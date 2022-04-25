@@ -10,14 +10,22 @@ class DragonAvatar extends Component {
 
     if (!dragonId) return <div></div>;
 
+    const birthDateFormatted =
+      birthdate.slice(0, 10) + " " + birthdate.slice(11, 19);
     return (
       <div className="DragonAvatar">
-        <p>Dragon Id: {dragonId}</p>
-        <p>Nickname: {nickname}</p>
-        <p>Birthdate: {birthdate}</p>
-        <p>Generation Id: {generationId}</p>
-        {generateDragonTraits(traits)}
         {getDragonImage(traits)}
+        <div className="DragonAvatar--stats">
+          <div className="stats-group1">
+            {generateDragonTraits(traits)}
+          </div>
+          <div className="stats-group2">
+            <p>Dragon Id: {dragonId}</p>
+            {/* <p>Nickname: {nickname}</p> */}
+            <p>Birthdate: {birthDateFormatted}</p>
+            <p>Generation Id: {generationId}</p>
+          </div>
+        </div>
       </div>
     );
   }

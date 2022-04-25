@@ -1,15 +1,18 @@
 import "./App.css";
-import Generation from "./components/Generation/Generation";
-import Dragon from "./components/Dragon/Dragon";
+import Home from "./components/Home/Home";
+import AuthForm from "./components/AuthForm/AuthForm";
+import { connect } from "react-redux";
+import { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>App</h1>
-      <Generation />
-      <Dragon />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1 className="App--title">Dragon Collections</h1>
+        {this.props.account.loggedIn ? <Home /> : <AuthForm />}
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect(({ account }) => ({ account }))(App);

@@ -1,0 +1,28 @@
+.AuthForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.AuthForm--forms {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.AuthForm--buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+input {
+  border-radius: 4px;
+  border-color: 1px solid black;
+  padding: 0.5rem;
+  width: 30rem;
+  max-width: min(50rem, 100vw);
+}

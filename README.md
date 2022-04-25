@@ -1,6 +1,7 @@
 # PERN Collections Game
 
-![Collections Gif](https://gfycat.com/naughtydarlingiceblueredtopzebra)
+https://gfycat.com/naughtydarlingiceblueredtopzebra
+![Collections Gif](https://thumbs.gfycat.com/NaughtyDarlingIceblueredtopzebra-size_restricted.gif)
 
 PERN Collections Game was originally designed to be a collecting game where players can login and collect different types of mythical creatures. On top of that, they will be able to trade and use their creatures to earn more gold, the in-game currency.
 

@@ -9,16 +9,12 @@ The initial use-case for this application was to provide a generation engine for
 PERN Collections Game is a fullstack application built using: PostgreSql as the database, node.js and express for the backend, and React for the frontend.
 
 Todo:
-[x] Sync backend and frontend timeout generation function
-[x] Provide login and signup functionality
-[x] Provide account validation functionality
-[ ] Check session signature does not already exist in local storage
-[ ] Improve UI and design
-[ ] Refactor accountLogoutController to a service if necessary
-[ ] Refactor client for async/await instead of .then() chaining
-[ ] Link Accounts with Dragons created
-[ ] Frontend: 0. Add action to handle fetch
 
-1. Add Root
-2. Add AuthForm
-3. Have Root render AuthForm or Home depending on account.
+- [x] Sync backend and frontend timeout generation function
+- [x] Provide login and signup functionality
+- [x] Provide account validation functionality
+- [ ] Check session signature does not already exist in local storage
+- [ ] Improve UI and design
+- [ ] Refactor accountLogoutController to a service if necessary
+- [ ] Refactor client for async/await instead of .then() chaining
+- [ ] Link Accounts with Dragons created
